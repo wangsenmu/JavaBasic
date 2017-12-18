@@ -7,6 +7,7 @@ package com.wsm.singleton;
  */
 public class LazySingleton {
 
+
     private static LazySingleton singleton = null;
 
     public LazySingleton() {
