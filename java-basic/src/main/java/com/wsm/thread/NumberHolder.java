@@ -8,6 +8,7 @@ public class NumberHolder {
     private int number;
 
     public synchronized void increase() {
+        //while   唤醒之后继续判断
         if (0 != number) {
             try {
                 wait();
@@ -26,6 +27,7 @@ public class NumberHolder {
     }
 
     public synchronized void decrease() {
+        //while   唤醒之后继续判断
         if (0 == number) {
             try {
                 wait();
