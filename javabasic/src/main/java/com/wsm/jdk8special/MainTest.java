@@ -2,6 +2,7 @@ package com.wsm.jdk8special;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -22,6 +23,9 @@ public class MainTest {
 
         testCollectionDefaultMethod();
 
+        Collection collection;
+        Collections collections;
+
     }
 
     static void testCollectionDefaultMethod(){
@@ -39,6 +43,12 @@ public class MainTest {
         });
 
         System.out.println(list.size());
+
+        list.forEach(cc-> System.out.printf(cc));
+        list.forEach(cc-> cc.equals("bc"));
+        list.forEach(System.err::println);
+        System.out.println(list.size());
+
 
     }
 
