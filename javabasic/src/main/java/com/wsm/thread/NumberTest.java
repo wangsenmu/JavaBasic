@@ -11,6 +11,10 @@ public class NumberTest {
         Thread t2 = new DecreaseThread(numberHolder);
 
         t1.start();
+        //一个线程多次启动（调用start方法）会报非法线程状态异常 详情见源码 IllegalThreadStateException
+        t1.start();
+
+
         t2.start();
     }
 }
