@@ -9,6 +9,14 @@ package com.wsm.staticstudy;
  * 3、调用父类构造方法
  * 4、调用自己构造方法
  *
+ * 【final方法为何会高效】：
+   final方法会在编译的过程中利用内嵌机制进行inline优化。
+   inline优化是指：在编译的时候直接调用函数代码替换，而不是在运行时调用函数。
+   inline需要在编译的时候就知道最后要用哪个函数，
+   显然，非final是不行的。
+   非final方法可能在子类中被重写，由于可能出现多态的情况，编译器在编译阶段
+   并不能确定将来调用方法的对象的真正类型，也就无法确定到底调用哪个方法。
+ *
  */
 public class StaticLoadOrder extends StaticLoadOrderSupper {
 
