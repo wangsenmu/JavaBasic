@@ -31,7 +31,7 @@ public class AtomicIntegerTest {
 
 
 
-        //使用了大量的final修饰的方法和 volatile
+        //使用了大量的final修饰的方法和 volatilee
 
 //        AtomicInteger atomicInteger = new AtomicInteger();
 
